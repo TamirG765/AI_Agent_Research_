@@ -25,7 +25,6 @@ from langgraph.graph import StateGraph, START, END
 from langchain_core.messages import SystemMessage, HumanMessage, AIMessage
 
 # -------------------------------------------------------------------------
-# -------------------------------------------------------------------------
 # Analyst personas data models (from notebook)
 # -------------------------------------------------------------------------
 from pydantic import BaseModel, Field
@@ -120,7 +119,6 @@ def generate_answer(state: QAState) -> QAState:
 # -------------------------------------------------------------------------
 # Build LangGraph DAG (node IDs distinct from state keys)
 # -------------------------------------------------------------------------
-# Build LangGraph DAG (node IDs distinct from state keys)
 _graph = StateGraph(QAState)
 _graph.add_node("create_query", create_search_query)
 _graph.add_node("run_search", run_search)
